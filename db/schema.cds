@@ -12,4 +12,12 @@ entity Fields : managed, cuid  {
 entity Images : managed, cuid  { 
   name   : String(111);
   field  : Association to Fields;
+  plants : Composition of many Plants on plants.image = $self;
+}
+
+entity Plants : managed, cuid  { 
+  name   : String(111);
+  image  : Association to Images;
+  type  : String(111);
+
 }

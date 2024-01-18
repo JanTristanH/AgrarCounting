@@ -1,4 +1,6 @@
-annotate MainService.Fields with @(
+using MainService as service from '../../srv/main-service';
+
+annotate service.Fields with @(
     odata.draft.enabled,
     UI: {
         SelectionFields       : [

@@ -1,0 +1,48 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:upload="sap.m.upload">
+    <Text text="1234"/>
+
+		<upload:UploadSet
+				id="UploadSet"
+				instantUpload="true"
+				showIcons="true"
+				uploadEnabled="true"
+				fileTypes="png"
+				maxFileNameLength="30"
+				maxFileSize="200"
+				mediaTypes="image/png"
+				uploadUrl="/Images"
+				items="{path: '/Images',parameters: { $orderby: 'createdAt desc'}, templateShareable: false}"
+				mode="MultiSelect"
+				selectionChanged="onSelectionChange">
+			<upload:toolbar>
+			</upload:toolbar>
+			<upload:items>
+				<upload:UploadSetItem
+						fileName="{fileName}"
+						mediaType="{mediaType}"
+						url="{url}"
+                        enabledEdit="false"
+							visibleEdit="false"
+							openPressed="onOpenPressed"
+						>
+<upload:attributes>
+								<ObjectAttribute
+									title="Uploaded By"
+									text="{createdBy}"
+									active="false"
+								/>
+								<ObjectAttribute
+									title="Uploaded on"
+									text="{createdAt}"
+									active="false"
+								/>
+								<ObjectAttribute
+									title="File Size"
+									text="{size}"
+									active="false"
+								/>
+							</upload:attributes>
+				</upload:UploadSetItem>
+			</upload:items>
+		</upload:UploadSet>
+</core:FragmentDefinition>

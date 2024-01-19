@@ -123,10 +123,21 @@
                     "sap.suite.ui.generic.template.ObjectPage.view.Details": {
                         "AfterFacet|Fields|HeaderInfo": {
                             "type": "XML",
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "agc.agrc.ext.fragment.ImageSection",
+                            "className": "sap.ui.core.mvc.View",
+                            "viewName": "agc.agrc.ext.view.ImageSection",
                             "sap.ui.generic.app": {
                                 "title": "Images"
+                            }
+                        }
+                    }
+                },
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+                        "controllerName": "agc.agrc.ext.controller.ImageSection",
+                        "sap.ui.generic.app": {
+                            "Fields": {
+                                "EntitySet": "Fields",
+                                "Header": {}
                             }
                         }
                     }

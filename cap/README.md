@@ -2,6 +2,8 @@
 
 Welcome to your new project.
 
+https://blogs.sap.com/2021/08/18/my-journey-towards-using-ui5-uploadset-with-cap-backend/
+
 It contains these folders and files, following our recommended project layout:
 
 File or Folder | Purpose

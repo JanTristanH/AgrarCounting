@@ -1,4 +1,6 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:upload="sap.m.upload">
+<mvc:View 
+	controllerName="agc.agrc.ext.controller.ImageSection"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:upload="sap.m.upload">
     <Text text="1234"/>
 
 		<upload:UploadSet
@@ -10,7 +12,8 @@
 				maxFileNameLength="30"
 				maxFileSize="200"
 				mediaTypes="image/png"
-				uploadUrl="/Images"
+				afterItemAdded="onAfterItemAdded"
+				uploadCompleted="onUploadCompleted"	
 				items="{path: '/Images',parameters: { $orderby: 'createdAt desc'}, templateShareable: false}"
 				mode="MultiSelect"
 				selectionChanged="onSelectionChange">
@@ -45,4 +48,4 @@
 				</upload:UploadSetItem>
 			</upload:items>
 		</upload:UploadSet>
-</core:FragmentDefinition>
+</mvc:View>

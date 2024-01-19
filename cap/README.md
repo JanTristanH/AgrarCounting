@@ -4,6 +4,14 @@ Welcome to your new project.
 
 https://blogs.sap.com/2021/08/18/my-journey-towards-using-ui5-uploadset-with-cap-backend/
 
+## Idea
+
+remove green / Black
+do edge detection -> Identify individual platns
+create cut out image
+sent cut image to plantnet API
+https://my.plantnet.org/
+
 It contains these folders and files, following our recommended project layout:
 
 File or Folder | Purpose

@@ -5,7 +5,6 @@ annotate service.Fields with @(
     odata.draft.enabled,
     UI: {
         SelectionFields       : [
-            ID,
             title,
             descr
         ],
@@ -22,6 +21,11 @@ annotate service.Fields with @(
         FieldGroup #HeaderInfo: {
             $Type: 'UI.FieldGroupType',
             Data : [
+                {
+                    $Type: 'UI.DataField',
+                    Value: ID,
+                    Label: 'ID',
+                },
                 {
                     $Type: 'UI.DataField',
                     Value: title,
